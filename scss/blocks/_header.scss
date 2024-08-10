@@ -1,3 +1,182 @@
-header {
-    color: #000;
+// _header.scss
+@import '../variables'; 
+
+.container {
+  width: $container-width;
+  margin: 0 auto;
+}
+
+.header {
+    background-color: $bg-secondary;
+    width: 100%;
+}
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  color: $text-primary;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  
+  &:hover {
+    color: $text-accent;
+  }
+}
+@media (max-width: 1280px) {
+  .container {
+    width: 95%; // Уменьшаем ширину контейнера для экранов 1280px
+  }
+
+  .header-wrapper {
+    padding: 20px 0; // Отступы остаются прежними для экранов 1280px
+  }
+
+  .logo {
+    font-size: 22px; // Уменьшаем размер шрифта для логотипа
+  }
+
+  .nav {
+    gap: 25px; // Уменьшаем отступы между ссылками
+  }
+
+  .nav-link {
+    font-size: 16px; // Уменьшаем размер шрифта для ссылок
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 90%; // Уменьшаем ширину контейнера для экранов 1024px
+  }
+
+  .header-wrapper {
+    padding: 20px 0; // Отступы остаются прежними для экранов 1024px
+  }
+
+  .logo {
+    font-size: 22px; // Уменьшаем размер шрифта для логотипа
+  }
+
+  .nav {
+    gap: 25px; // Уменьшаем отступы между ссылками
+  }
+
+  .nav-link {
+    font-size: 16px; // Уменьшаем размер шрифта для ссылок
+  }
+}
+
+@media (max-width: 920px) {
+  .container {
+    width: 85%; // Уменьшаем ширину контейнера для экранов 920px
+  }
+
+  .header-wrapper {
+    padding: 15px 0; // Уменьшаем отступы для экранов 920px
+  }
+
+  .logo {
+    font-size: 20px; // Уменьшаем размер шрифта для логотипа
+  }
+
+  .nav {
+    gap: 20px; // Уменьшаем отступы между ссылками
+  }
+
+  .nav-link {
+    font-size: 14px; // Уменьшаем размер шрифта для ссылок
+  }
+}
+
+@media (max-width: 690px) {
+  .container {
+    width: 80%; // Уменьшаем ширину контейнера для экранов 690px
+  }
+
+  .header-wrapper {
+    padding: 10px 0; // Уменьшаем отступы для экранов 690px
+  }
+
+  .logo {
+    font-size: 18px; // Уменьшаем размер шрифта для логотипа
+  }
+
+  .nav {
+    gap: 15px; // Уменьшаем отступы между ссылками
+  }
+
+  .nav-link {
+    font-size: 12px; // Уменьшаем размер шрифта для ссылок
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 510px; // Уменьшаем ширину контейнера для экранов 510px
+    margin: 0 auto;
+  }
+
+  .header-wrapper {
+    flex-direction: column; // Располагаем элементы в колонку
+    align-items: center; // Центрируем элементы
+    padding: 5px 0; // Уменьшаем отступы для экранов 510px
+  }
+
+  .logo {
+    font-size: 16px; // Уменьшаем размер шрифта для логотипа
+    margin-bottom: 10px;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center; // Изменяем направление на колонку для навигации
+    gap: 50px; // Уменьшаем отступы между ссылками
+  }
+
+  .nav-link {
+    color: $text-primary;
+    text-decoration: none;
+    font-size: 18px; // Уменьшаем размер шрифта для ссылок
+    font-weight: 500;
+    
+    &:hover {
+      color: $text-accent;
+    }
+  }
+}
+@media (max-width: 320px) {
+  .container {
+    width: 90%; // Минимальная ширина контейнера для экранов 320px
+  }
+
+  .header-wrapper {
+    padding: 5px 0; // Минимальные отступы для экранов 320px
+  }
+
+  .logo {
+    font-size: 14px; // Минимальный размер шрифта для логотипа
+  }
+
+  .nav {
+    gap: 8px; // Минимальные отступы между ссылками
+  }
+
+  .nav-link {
+    font-size: 8px; // Минимальный размер шрифта для ссылок
+  }
 }

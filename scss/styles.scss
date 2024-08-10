@@ -18,20 +18,11 @@ a, ul, li {
 }
 
 body {
+    max-width: 1440px;
     font-family: "Raleway", sans-serif;
     font-weight: 500;
     font-size: 13px;
 }
-
-// Фоновые цвета
-$bg-primary: #F4F6F5;
-$bg-secondary: #E1EDE6;
-
-// Цвета текста
-$text-primary: #2C2D35;
-$text-secondary: #86928B;
-$text-accent: #598D66;
-$text-contrast: #FFFFFF;
 
 .primary-btn {
     color: $text-accent;
