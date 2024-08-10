@@ -1,1 +1,93 @@
-/*# sourceMappingURL=styles.css.map */
+*, ::after, ::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a, ul, li {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+
+.primary-btn {
+  color: #598D66;
+  border: 1px solid #598D66;
+  background-color: #FFFFFF;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  width: 227px;
+  height: 63px;
+}
+.primary-btn:hover {
+  background-color: #598D66;
+  color: #F4F6F5;
+}
+.primary-btn:focus {
+  background-color: #b1ceb8;
+  color: #598D66;
+  border-color: #598D66;
+}
+.primary-btn:active {
+  background-color: #324e39;
+  color: #FFFFFF;
+}
+
+.promo-btn {
+  background-color: #EEDB6D;
+  color: #2C2D35;
+  width: 227px;
+  height: 63px;
+}
+.promo-btn:hover {
+  background-color: #FAEB97;
+  color: #2C2D35;
+}
+.promo-btn:focus {
+  background-color: #FAEB97;
+  color: #2C2D35;
+  border: 1px solid #A38314;
+}
+.promo-btn:active {
+  background-color: #D9B949;
+  color: #2C2D35;
+}
+
+.tab-btn {
+  background-color: #b1ceb8;
+  color: #2C2D35;
+  width: 126px;
+  height: 43px;
+  border-radius: 20px;
+}
+.tab-btn:hover {
+  background-color: #598D66;
+  color: #F4F6F5;
+}
+.tab-btn:focus {
+  background-color: #b1ceb8;
+  color: #2C2D35;
+  border: 1px solid #598D66;
+}
+.tab-btn:active {
+  background-color: #324e39;
+  color: #F4F6F5;
+}
+
+.icon {
+  color: #2C2D35;
+}
+.icon:hover {
+  color: #598D66;
+}
+.icon:focus {
+  color: #598D66;
+  background-color: #b1ceb8;
+}
+.icon:active {
+  color: #324e39;
+}/*# sourceMappingURL=styles.css.map */
