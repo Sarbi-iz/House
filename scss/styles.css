@@ -11,6 +11,7 @@ a, ul, li {
 body {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
+  font-size: 13px;
 }
 
 .primary-btn {
