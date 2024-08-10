@@ -1,3 +1,11 @@
+@import 
+'blocks/header',
+'blocks/main',
+'blocks/catalog',
+'blocks/promo',
+'blocks/about',
+'blocks/footer';
+
 *, ::after, ::before {
     box-sizing: border-box;
     margin: 0;
