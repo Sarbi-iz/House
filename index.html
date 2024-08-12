@@ -18,18 +18,34 @@
                     <a href="#header" class="logo-link">
                         <img src="img/logo.svg" alt="logo">
                     </a>
-                  </div>
-                  <div class="divider"></div> <!-- Разделительная линия -->
-                  <nav class="nav">
-                    <a href="#catalog" class="nav-link">Репродукции</a>
-                    <a href="#main" class="nav-link">Новинки</a>
-                    <a href="#about" class="nav-link">О нас</a>
-                    <a href="#" class="nav-link cart">
-                      <img class="cart-icon" src="img/basket.svg" alt="cart">
-                  </a>
-                </nav>
                 </div>
+                  <div class="divider"></div> <!-- Разделительная линия -->
+                  <div class="nav-wrapper">
+                    <nav class="nav">
+                        <a href="#catalog" class="nav-link">Репродукции</a>
+                        <a href="#main" class="nav-link">Новинки</a>
+                        <a href="#about" class="nav-link">О нас</a>
+                      </nav>
+                      <div class="burger">
+                        <img src="img/Icons/List.svg" alt="burger">
+                      </div>
+                      <a href="#" class="nav-link cart">
+                        <img class="cart-icon" src="img/basket.svg" alt="cart">
+                      </a>
+                  </div>
+            </div>
+              <!-- Скрытое меню для маленьких экранов -->
+        <div class="mobile-menu hidden">
+          <img src="img/Icons/exit.svg" alt="exit" class="close-btn"> <!-- Иконка "Exit" -->
+          <a href="#catalog" class="nav-link">Репродукции</a>
+          <a href="#main" class="nav-link">Новинки</a>
+          <a href="#about" class="nav-link">О нас</a>
+      </div>
             </div>
         </header>
+
+
+
+        <script src="js/app.js"></script>
 </body>
 </html>

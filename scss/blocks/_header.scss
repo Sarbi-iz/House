@@ -7,26 +7,41 @@
 }
 
 .header {
-    background-color: $bg-secondary;
-    width: 100%;
+  background-color: $bg-secondary;
+  width: 100%;
 }
+
 .header-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
+  box-sizing: border-box; /* Учитываем отступы внутри элемента */
 }
+
+.logo-link img {
+  max-width: 100%;
+  height: auto;
+}
+
 .divider {
-  display: none; // Скрываем линию по умолчанию
+  display: none; /* Скрываем линию по умолчанию */
 }
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Расстояние между элементами */
+}
+
 .nav {
   display: flex;
   gap: 30px;
+  align-items: center;
 }
 
 .nav-link {
@@ -39,6 +54,59 @@
     color: $text-accent;
   }
 }
+
+.cart-icon {
+  width: 24px; /* Устанавливаем ширину для иконки корзины */
+  height: auto; /* Автоматическая высота для сохранения пропорций */
+}
+
+.burger {
+  display: none; /* Скрываем бургер по умолчанию */
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+}
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 73px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $bg-secondary; /* Регулируйте по необходимости */
+  padding: 20px;
+  z-index: 1000;
+  
+  .nav-link {
+    margin-bottom: 50px;
+    font-size: 18px;
+  }
+
+  .close-btn {
+    font-size: 24px;
+    align-self: flex-start;
+    margin-bottom: 30px;
+    cursor: pointer;
+    display: none; /* Изначально скрываем иконку */
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: flex;
+}
+
+.visible .close-btn {
+  display: block; /* Показываем иконку при открытии меню */
+}
+
+
+
 @media (max-width: 1280px) {
   .container {
     width: 95%; // Уменьшаем ширину контейнера для экранов 1280px
@@ -57,7 +125,7 @@
   }
 
   .nav-link {
-    font-size: 16px; // Уменьшаем размер шрифта для ссылок
+    font-size: 18px; // Уменьшаем размер шрифта для ссылок
   }
 }
 
@@ -79,7 +147,7 @@
   }
 
   .nav-link {
-    font-size: 16px; // Уменьшаем размер шрифта для ссылок
+    font-size: 18px; // Уменьшаем размер шрифта для ссылок
   }
 }
 
@@ -101,7 +169,7 @@
   }
 
   .nav-link {
-    font-size: 14px; // Уменьшаем размер шрифта для ссылок
+    font-size: 18px; // Уменьшаем размер шрифта для ссылок
   }
 }
 
@@ -123,7 +191,7 @@
   }
 
   .nav-link {
-    font-size: 12px; // Уменьшаем размер шрифта для ссылок
+    font-size: 18px; // Уменьшаем размер шрифта для ссылок
   }
 }
 
@@ -140,9 +208,9 @@
   }
 
   .logo {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
+    width: 100%;
+    text-align: center;
+}
 
   .divider {
     display: block; // Делаем линию видимой
@@ -169,24 +237,52 @@
     }
   }
 }
-@media (max-width: 320px) {
-  .container {
-    width: 90%; // Минимальная ширина контейнера для экранов 320px
+@media (max-width: 380px) {
+  .header {
+    background-color: #fff;
   }
+  .container {
+    width: 100%;
+    margin: 0 auto;
+}
 
   .header-wrapper {
-    padding: 5px 0; // Минимальные отступы для экранов 320px
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0;
   }
 
   .logo {
-    font-size: 14px; // Минимальный размер шрифта для логотипа
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px 0; /* Отступы сверху и снизу */
+}
+  .divider {
+    display: none; // Скрываем линию по умолчанию
   }
-
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: $bg-secondary;
+    width: 100%;
+    padding: 16px 15px;
+  }
   .nav {
-    gap: 8px; // Минимальные отступы между ссылками
+      display: none; /* Скрываем навигацию */
   }
 
-  .nav-link {
-    font-size: 8px; // Минимальный размер шрифта для ссылок
+  .cart-icon {
+    right: 0;
+      width: 24px; /* Устанавливаем ширину для иконки корзины */
+      height: auto; /* Автоматическая высота для сохранения пропорций */
+  }
+
+  .cart {
+      display: block; /* Убеждаемся, что корзинка отображается */
+  }
+
+  .burger {
+      display: block; /* Показываем бургер на малых экранах */
   }
 }
