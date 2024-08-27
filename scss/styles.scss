@@ -23,35 +23,7 @@ body {
     font-weight: 500;
     font-size: 13px;
 }
-
-.primary-btn {
-    color: $text-accent;
-    border: 1px solid $text-accent;
-    background-color: $text-contrast;
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    width: 227px;
-    height: 63px;
-  
-    &:hover {
-      background-color: $text-accent;
-      color: $bg-primary;
-    }
-  
-    &:focus {
-      background-color: lighten($text-accent, 30%);
-      color: $text-accent;
-      border-color: $text-accent;
-    }
-  
-    &:active {
-      background-color: darken($text-accent, 20%);
-      color: $text-contrast;
-    }
-  }
-
-  .promo-btn {
+.promo-btn {
     background-color: #EEDB6D;
     color: $text-primary;
     width: 227px;
@@ -73,31 +45,6 @@ body {
       color: $text-primary;
     }
   }
-
-  .tab-btn {
-    background-color: lighten($text-accent, 30%);
-    color: $text-primary;
-    width: 126px;
-    height: 43px;
-    border-radius: 20px;
-  
-    &:hover {
-      background-color: $text-accent;
-      color: $bg-primary;
-    }
-  
-    &:focus {
-      background-color: lighten($text-accent, 30%);
-      color: $text-primary;
-      border: 1px solid $text-accent;
-    }
-  
-    &:active {
-      background-color: darken($text-accent, 20%);
-      color: $bg-primary;
-    }
-  }
-
   .icon {
     color: $text-primary;
   

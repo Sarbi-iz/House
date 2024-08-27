@@ -1,0 +1,147 @@
+@import '../variables';
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+// Catalog Section
+.catalog {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 24px;
+    color: $text-primary;
+  }
+
+  &__filters {
+    display: flex;
+    gap: 10px;
+
+    .filter {
+      border: none;
+      padding: 0;
+    }
+
+    .tab-btn {
+      background-color: lighten($text-accent, 30%);
+      color: $text-primary;
+      width: 126px;
+      height: 43px;
+      border-radius: 20px;
+      text-align: center;
+      line-height: 43px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      
+      &:hover {
+        background-color: $text-accent;
+        color: $bg-primary;
+      }
+
+      &:focus {
+        background-color: lighten($text-accent, 30%);
+        color: $text-primary;
+        border: 1px solid $text-accent;
+      }
+
+      &:active {
+        background-color: darken($text-accent, 20%);
+        color: $bg-primary;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  &__item {
+    background-color: $bg-secondary;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  &__item-pretitle {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: $text-secondary;
+  }
+  &__item-title {
+    font-size: 30px;
+    margin-bottom: 8px;
+    color: $text-primary;
+  }
+
+  &__description {
+    font-size: 18px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    color: $text-primary;
+  }
+
+  &__price {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: $text-accent;
+  }
+
+  &__button {
+    background-color: $bg-primary;
+    color: $text-accent;
+    border: 2px solid $text-accent;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $text-accent;
+      color: $text-contrast;
+    }
+  }
+}
+
+// Primary Button Styles
+.catalog-btn {
+  color: $text-accent;
+  border: 1px solid $text-accent;
+  background-color: transparent; // Убрано значение фона
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  width: 310px;
+  height: 63px;
+
+  &:hover {
+    background-color: $text-accent;
+    color: $bg-primary;
+  }
+
+  &:focus {
+    background-color: lighten($text-accent, 30%);
+    color: $text-accent;
+    border-color: $text-accent;
+  }
+
+  &:active {
+    background-color: darken($text-accent, 20%);
+    color: $text-contrast;
+  }
+}
