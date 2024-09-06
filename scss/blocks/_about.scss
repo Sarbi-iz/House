@@ -1,0 +1,71 @@
+.about {
+  padding: 60px 0;
+  background-color: $bg-primary;
+
+  .about-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1110px;
+    margin: 0 auto;
+    gap: 50px;
+  }
+
+  .about-image {
+    flex: 1;
+    img {
+      width: 100%;
+      height: auto;
+      border: 10px solid #ccc; /* Стили для рамки */
+    }
+  }
+
+  .about-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .about-title {
+      font-size: 36px;
+      color: $text-primary;
+      margin-bottom: 20px;
+    }
+
+    .about-description {
+      font-size: 18px;
+      color: $text-secondary;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    .about-team {
+      display: flex;
+      gap: 20px;
+
+      .about-team-member {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+
+    .about-image,
+    .about-text {
+      width: 100%;
+    }
+
+    .about-team {
+      justify-content: center;
+    }
+  }
+}
